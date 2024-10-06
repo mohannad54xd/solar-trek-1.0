@@ -1,6 +1,6 @@
 # THREE.js Orrey Web App
 
-Watch the PROJECT on [YouTube](https://youtu.be/FntV9iEJ0tU)
+Watch the PROJECT on [YouTube]([https://youtu.be/FntV9iEJ0tU](https://youtu.be/6aMwjUjeV8A?si=kb-xIRIHjhDrsM0s))
 
 Depenceies:
 - Install Node.js. We'll need it to load manage dependencies and to run our build tool.
