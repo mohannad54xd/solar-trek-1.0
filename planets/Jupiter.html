@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nasa Space Apps Project (beta)</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+    <script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+        }
+			}
+		</script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="planet-data">
+      <h2>Planetary Data</h2>
+      <div class="inside">
+        <div class="navbar">
+          <span id="prev" class="arrow" style="cursor: pointer;">&#9664;</span> <!-- Left arrow -->
+          <span id="next" class="arrow" style="cursor: pointer;">&#9654;</span> <!-- Right arrow -->
+        </div>
+
+        <div class="slides active" id="slide1">
+          <h2>Welcome to Planet Exploration</h2>
+          <p>Explore the fascinating details about different planets!</p>
+        </div>
+
+        <div class="slides" id="slide2">
+          <h2>Planetary Overview</h2>
+          <p id="planet-name">Name: Jupiter</p>
+          <p id="planet-distance">Distance from Sun: 778.5 million km</p>
+          <p id="planet-radius">Equatorial Radius: 69,911 km</p>
+          <p id="planet-gravity">Gravity: 24.79 m/s²</p>
+          <p id="planet-moons">Moons: 79 (including Ganymede, Io, Europa, Callisto)</p>
+        </div>
+
+        <div class="slides" id="slide3">
+          <h2>Planetary Facts</h2>
+          <p id="planet-fact">Jupiter is the largest planet in the Solar System and is known for its Great Red Spot, a giant storm.</p>
+        </div>
+
+        <div class="slides" id="slide4">
+          <h2>Atmospheric Composition</h2>
+          <p id="planet-atmosphere">Jupiter's atmosphere is composed mostly of hydrogen and helium, with trace amounts of other gases.</p>
+        </div>
+
+        <div class="slides" id="slide5">
+          <h2>Moons of Jupiter</h2>
+          <p id="planet-moons-details">Jupiter has 79 known moons, including the four largest: Ganymede, Io, Europa, and Callisto, known as the Galilean moons.</p>
+        </div>
+
+        <div class="slides" id="slide6">
+          <h2>Geological Features</h2>
+          <p id="planet-geology">Jupiter has no solid surface. It is a gas giant, with bands of clouds and a dynamic atmosphere.</p>
+        </div>
+
+        <div class="slides" id="slide7">
+          <h2>Exploration Missions</h2>
+          <p id="planet-exploration">Jupiter has been explored by missions such as Pioneer, Voyager, Galileo, and Juno, revealing much about its atmosphere and moons.</p>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="jupiter.js"></script>
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.slides');
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.remove('active');
+          if (i === index) {
+            slide.classList.add('active');
+          }
+        });
+      }
+
+      document.getElementById('next').addEventListener('click', function () {
+        currentSlide = (currentSlide + 1) % totalSlides; // Move to the next slide
+        showSlide(currentSlide);
+      });
+
+      document.getElementById('prev').addEventListener('click', function () {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; // Move to the previous slide
+        showSlide(currentSlide);
+      });
+
+      // Add an event listener to the button
+      document.getElementById("game").addEventListener("click", function() {
+        // Redirect to the URL of your game
+        window.location.href = "/new-game-project/test.html";  // Replace with the actual URL of your game
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0px;
+  background-color: #f5f5f5;
+  height: 100vh;
+  background-color: #ccc;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 0 0;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #7a0016;
+  width: 200px;
+  margin: 20px;
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -60px;
+  border: 4px solid white;
+}
+
+.team-member h3 {
+  color: #fff;
+  margin-top: 80px; /* Adjust to move below the image */
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icon {
+  margin: 0 5px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.Bold {
+  font-style: italic;
+  font-size: 22px;
+}
+
+.M {  
+  height: 100%;
+  background-size: cover;
+  padding-bottom: 60px;
+}
+.team-member h3
+{
+  font-size: 22px;
+}
+
+.wix-madefor-display-font {
+font-family: "Wix Madefor Display", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+}
+.astroid {
+position: absolute;
+right: 4px;
+width: 150px;
+}

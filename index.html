@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Spartan' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="explore.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-toggle" id="nav-toggle">☰</div>
+        <ul class="nav-list" id="nav-list">
+           <a class="line" href="#explore">
+            <li class="nav-item" data-section="1">Explore</li>
+           </a>
+            </a>
+            <a class="line" href="#contact">
+                <li class="nav-item" data-section="3">Contact</li>
+            </a>
+        </ul>
+    </nav>
+     
+     
+    <div class="backgoundimg"  id="main">
+
+      <img src="HOME/PARTS/images/Earth.jpg" alt="55555555555555555">
+      <h1 class="title">SOLAR TREK</h1>
+
+    </div>
+
+<div>
+
+</div>
+    
+
+
+
+
+
+<section class="hero" id="explore">
+  <h1>Explore solar</h1>
+  <p>Take to the stars and unearth the solar system and the space around the earth. Through the power of a 3D globe of Earth and our interactive orrery web app of Sola, you can explore celestial bodies in an interactive and visually appealing manner.</p>
+  <div class="button-container">
+      <button id="earth-globe-btn">Explore 3D globe of Earth</button>
+      <button id="solar-orrery-btn">Explore solar orrery</button>
+  </div>
+
+</section>
+  
+
+<div class="M" id="contact">
+    <img class="astroid" src="HOME/PARTS/Astrid__icon.png" >
+   
+    <br><br><br><br><br><br><br><br><br>
+    <div class="team-members" >
+      <div class="team-member">
+        <img src="HOME/PARTS/images/mohannad.jpg" alt="Mohannad Essam">
+        <h3>Mohannad Essam</h3>
+        <p><br>Front-END DEV</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/mohannad-essam-092aa02b9/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/trz_mohannad112/" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="HOME/PARTS/images/yehia.jpg" alt="Yehia Ahmed">
+        <h3>Yehia Ahmed </h3>
+        <p><br> Reashercher</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/yehia-ahmed-b95b812ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/13.yehia/" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="HOME/PARTS/images/sara.jpg" alt="Sara Mohamed">
+        <h3>Sara Mohamed</h3>
+        <p><br>UI/UX</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/sara-salimbadawy-301873316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="HOME/PARTS/images/mands.jpg" alt="Mohannad">
+        <h3>Mohannad</h3>
+        <p><br> Front-END DEV</p>
+        <div class="social-icons">
+          <a href="https://eg.linkedin.com/in/mohanad-abdelnaby-74130a2b3 " class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/_mands_s_/" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <footer>
+    <p>Created By <a href="#">BMOS Team</a></p>
+    <p>We are a group of high school students from Egypt who are fascinated by space exploration. We developed Solar Trek to participate in NASA’s International Space Apps Challange. Our goal is to contribute our skills and knowledge while inspiring other’s passion for the cosmos.</p>
+    <p>SOLARTREK 2024 all rights reserved <sub>&#169;</sub>
+    </p>
+  </footer>
+  
+  <script>
+      document.getElementById('earth-globe-btn').addEventListener('click', function() {
+  window.location.href = 'planets/earth.html';
+});
+
+document.getElementById('solar-orrery-btn').addEventListener('click', function() {
+  window.location.href = 'main.html';
+});
+
+  </script>
+</body>
+</html>
+

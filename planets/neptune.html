@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nasa Space Apps Project (beta)</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+    <script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+        }
+			}
+		</script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="planet-data">
+      <h2>Planetary Data</h2>
+      <div class="inside">
+        <div class="navbar">
+          <span id="prev" class="arrow" style="cursor: pointer;">&#9664;</span> <!-- Left arrow -->
+          <span id="next" class="arrow" style="cursor: pointer;">&#9654;</span> <!-- Right arrow -->
+        </div>
+
+        <div class="slides active" id="slide1">
+          <h2>Welcome to Planet Exploration</h2>
+          <p>Explore the fascinating details about different planets!</p>
+        </div>
+
+        <div class="slides" id="slide2">
+          <h2>Planetary Overview</h2>
+          <p id="planet-name">Name: Neptune</p>
+          <p id="planet-distance">Distance from Sun: 4.50 billion km</p>
+          <p id="planet-radius">Equatorial Radius: 24,622 km</p>
+          <p id="planet-gravity">Gravity: 11.15 m/s²</p>
+          <p id="planet-moons">Moons: 14 (including Triton, Proteus, Nereid)</p>
+        </div>
+
+        <div class="slides" id="slide3">
+          <h2>Planetary Facts</h2>
+          <p id="planet-fact">Neptune is the windiest planet in the Solar System, with winds reaching speeds of over 2,000 km/h.</p>
+        </div>
+
+        <div class="slides" id="slide4">
+          <h2>Atmospheric Composition</h2>
+          <p id="planet-atmosphere">Neptune's atmosphere is made up of hydrogen, helium, and methane, which gives it its distinctive blue color.</p>
+        </div>
+
+        <div class="slides" id="slide5">
+          <h2>Moons of Neptune</h2>
+          <p id="planet-moons-details">Neptune has 14 known moons, with Triton being the largest. Triton orbits Neptune in the opposite direction to the planet's rotation (retrograde orbit).</p>
+        </div>
+
+        <div class="slides" id="slide6">
+          <h2>Geological Features</h2>
+          <p id="planet-geology">Neptune is an ice giant with a rocky core surrounded by water, ammonia, and methane ices. It has no solid surface.</p>
+        </div>
+
+        <div class="slides" id="slide7">
+          <h2>Exploration Missions</h2>
+          <p id="planet-exploration">Neptune was visited by Voyager 2 in 1989, which provided the only close-up images of the planet and its moons.</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="neptune.js"></script>
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.slides');
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.remove('active');
+          if (i === index) {
+            slide.classList.add('active');
+          }
+        });
+      }
+
+      document.getElementById('next').addEventListener('click', function () {
+        currentSlide = (currentSlide + 1) % totalSlides; // Move to the next slide
+        showSlide(currentSlide);
+      });
+
+      document.getElementById('prev').addEventListener('click', function () {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; // Move to the previous slide
+        showSlide(currentSlide);
+      });
+
+      // Add an event listener to the button
+      document.getElementById("game").addEventListener("click", function() {
+        // Redirect to the URL of your game
+        window.location.href = "/new-game-project/test.html";  // Replace with the actual URL of your game
+      });
+    </script>
+  </body>
+</html>

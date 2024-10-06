@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nasa Space Apps Project (beta)</title>
+    <script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+        }
+			}
+		</script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="planet-data">
+      <h2>Planetary Data</h2>
+      <div class="inside">
+        <div class="navbar">
+          <span id="prev" class="arrow" style="cursor: pointer;">&#9664;</span> <!-- Left arrow -->
+          <span id="next" class="arrow" style="cursor: pointer;">&#9654;</span> <!-- Right arrow -->
+        </div>
+
+        <div class="slides active" id="slide1">
+          <h2>Welcome to Planet Exploration</h2>
+          <p>Explore the fascinating details about different planets!</p>
+        </div>
+
+        <div class="slides" id="slide2">
+          <h2>Planetary Overview</h2>
+          <p id="planet-name">Name: Venus</p>
+          <p id="planet-distance">Distance from Sun: 108.2 million km</p>
+          <p id="planet-radius">Equatorial Radius: 6,051.8 km</p>
+          <p id="planet-gravity">Gravity: 8.87 m/s²</p>
+          <p id="planet-moons">Moons: 0</p>
+        </div>
+
+        <div class="slides" id="slide3">
+          <h2>Planetary Facts</h2>
+          <p id="planet-fact">Venus is the second planet from the Sun and has a thick, toxic atmosphere that traps heat.</p>
+        </div>
+
+        <div class="slides" id="slide4">
+          <h2>Atmospheric Composition</h2>
+          <p id="planet-atmosphere">Venus' atmosphere is primarily composed of carbon dioxide, with clouds of sulfuric acid.</p>
+        </div>
+
+        <div class="slides" id="slide5">
+          <h2>No Moons</h2>
+          <p id="planet-moons-details">Like Mercury, Venus has no natural satellites or moons.</p>
+        </div>
+
+        <div class="slides" id="slide6">
+          <h2>Geological Features</h2>
+          <p id="planet-geology">Venus has a rocky, volcanic landscape with vast plains and highland regions.</p>
+        </div>
+
+        <div class="slides" id="slide7">
+          <h2>Exploration Missions</h2>
+          <p id="planet-exploration">Venus has been explored by missions such as Venera, Magellan, and Akatsuki, revealing details about its harsh environment.</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="venus.js"></script>
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.slides');
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.remove('active');
+          if (i === index) {
+            slide.classList.add('active');
+          }
+        });
+      }
+
+      document.getElementById('next').addEventListener('click', function () {
+        currentSlide = (currentSlide + 1) % totalSlides; // Move to the next slide
+        showSlide(currentSlide);
+      });
+
+      document.getElementById('prev').addEventListener('click', function () {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; // Move to the previous slide
+        showSlide(currentSlide);
+      });
+
+      // Add an event listener to the button
+      document.getElementById("game").addEventListener("click", function() {
+        // Redirect to the URL of your game
+        window.location.href = "/new-game-project/test.html";  // Replace with the actual URL of your game
+      });
+    </script>
+  </body>
+</html>

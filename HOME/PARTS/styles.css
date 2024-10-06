@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar { /* Dark color */
+  margin-left: 75%;
+  position: absolute;
+  padding: 20px;
+  background-color: transparent;
+}
+
+.nav-toggle {
+  display: none; /* Hide toggle on larger screens */
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+
+.nav-list {
+  background-color: transparent;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  padding: 0px 10px;
+  font-size: 22px;
+  margin: 0 15px;
+  color: white; /* Text color */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.nav-item:hover {
+  background-color: #5c4b8a; /* Dark purple on hover */
+  border-radius: 15px;
+  transition-timing-function: ease-in-out;
+  transition-duration: .8s;
+  font-size: 25px;
+}
+
+.nav-item.active {
+  background-color: #5c4b8a; /* Highlight active link */
+  border-radius: 20px;}
+
+.content {
+  padding: 20px;
+}
+
+section {
+  height: 600px; /* Example height for scrolling */
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .nav-list {
+      display: none; /* Hide list initially */
+      flex-direction: column;
+  }
+
+  .nav-toggle {
+      display: block; /* Show toggle on smaller screens */
+  }
+
+  .nav-list.show {
+      display: flex; /* Show list when toggled */
+  }
+
+}
+.title{
+  font-family: spartan;
+  text-align: center;
+  transform: transform('angle');
+  color: whitesmoke;
+  z-index: 2;
+  font-size: 75px;
+  height: 100px;
+  position: absolute;
+  top: 45%;
+  left: 32%;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+
+
+}
+.backgoundimg img {
+width: 101%;
+}
+.ex{
+  width: 100%;
+}
+.ex h2, .ex p{
+  text-align: center;
+}
+.sola
+{
+  font-size: 48px;
+  color: aqua;
+}
+
+/* ===================footer================ */
+footer{
+  padding: 20px 0 5px 0;
+  text-align: center;
+  color: #eee;
+  background-color: #3a39399f;
+}
+footer p{
+  font-family: sans-serif;
+  font-size: 1.5rem;
+ 
+}
+footer p a{
+  font-weight: 600;
+  font-family:monospace;
+  color: #bf5959;
+  text-decoration: none;
+  font-size: 1.8rem;
+  text-shadow: 1px 0 2px black;
+}
+footer p a:hover{
+  color: red;
+}
